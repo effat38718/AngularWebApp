@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+
+  
+
+    <mat-toolbar color="primary">
+      <span>L O G I N</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+  
+  <form class="example-form" (ngSubmit)="onSubmitLoginForm()" [formGroup]="loginFormGroup">
+    <br><br><br><br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" formControlName="email" name="username" id="name" placeholder="Ex. pat@example.com"> <br> <br>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="passwordInputField">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field><br> <br>  <br><br><br><br>
+      <div class="submit-button">
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </div>
+  </form>
+  
+</body>
+</html>
