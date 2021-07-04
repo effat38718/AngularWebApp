@@ -14,7 +14,6 @@ export class UserListComponent implements OnInit {
   dataSource: any;
   displayedColumns: string[] = ['username', 'email', 'gender', 'dob'];
 
-
   constructor(private http: HttpClient, private dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -35,10 +34,10 @@ export class UserListComponent implements OnInit {
   }
 
   openEditDataPopUp() {
-    const dialogconfig = new MatDialogConfig();
-    dialogconfig.disableClose = false;
-    dialogconfig.autoFocus = true;
-    dialogconfig.width = "50%";
+    // const dialogconfig = new MatDialogConfig();
+    // dialogconfig.disableClose = false;
+    // dialogconfig.autoFocus = true;
+    // dialogconfig.width = "50%";
     const dialogRef = this.dialog.open(UserEditComponent, { height: '380px', width: '300px' });
   }
 

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+// import { UserListComponent } from '../user-list.component';
 
 @Component({
   selector: 'app-user-edit',
@@ -13,7 +14,7 @@ export class UserEditComponent implements OnInit {
   UpdateFormGroup: FormGroup;
   BASEURL: string = 'http://127.0.0.1:5000/'
 
-  constructor( private http: HttpClient, private datepipe: DatePipe, private router: Router) {
+  constructor(private http: HttpClient, private datepipe: DatePipe, private router: Router) {
     this.UpdateFormGroup = new FormGroup(
       {
         username: new FormControl('name', Validators.required),
