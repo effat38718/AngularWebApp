@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
       res => {
         this.isValidated = this.validateUser(res, inputEmail, inputPass);
         if (this.isValidated) {
-          this.router.navigate(['/home']);
+          this.router.navigate(['/dashboard']);
         }
       },
       error => {

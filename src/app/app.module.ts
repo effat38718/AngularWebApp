@@ -23,6 +23,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './users/login/login.component';
 import { UserEditComponent } from './users/user-list/user-edit/user-edit.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { DashboardComponent } from './users/dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { ProductComponent } from './users/product/product.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     RegistrationComponent,
     UserListComponent,
     LoginComponent,
-    UserEditComponent
+    UserEditComponent,
+    DashboardComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +56,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     HttpClientModule,
     MatTableModule,
     AppRoutingModule,
-    MatDialogModule
+    MatDialogModule,
+    MatGridListModule
   ],
   providers: [DatePipe],
   entryComponents: [

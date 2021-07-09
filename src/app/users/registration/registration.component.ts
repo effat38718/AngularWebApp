@@ -54,7 +54,6 @@ export class RegistrationComponent implements OnInit {
     this.http.post(this.BASEURL + '/api/postdata', body).subscribe(
       res => {
         console.log(res)
-        this.router.navigate(['/home'])
       },
       error => {
         console.log(error)
