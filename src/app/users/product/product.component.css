@@ -36,4 +36,8 @@
     margin-top: 22vh;
   }
 
+
+.example-spacer {
+  flex: 1 1 auto;
+}
   

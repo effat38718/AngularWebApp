@@ -7,3 +7,7 @@
     margin-right:auto;  
     vertical-align:middle;
   }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+    
