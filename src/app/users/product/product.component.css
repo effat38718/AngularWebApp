@@ -1,0 +1,39 @@
+.button {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .button {
+    width: 500px;
+    height: 250px;
+    text-align: center;
+          }
+  .button2 {width: 50%;}
+  .button3 {width: 100%;}
+
+  .example-card {
+    
+    max-width: 1500px;
+    width: 1500px;
+    height: 980px;
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    margin-left:auto;
+    margin-right:auto;  
+    vertical-align:middle;
+  }
+
+  .example-button-container{
+    margin-top: 22vh;
+  }
+
+  

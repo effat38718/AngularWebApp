@@ -26,6 +26,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { DashboardComponent } from './users/dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ProductComponent } from './users/product/product.component';
+import { AddProductComponent } from './users/product/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProductComponent } from './users/product/product.component';
     LoginComponent,
     UserEditComponent,
     DashboardComponent,
-    ProductComponent
+    ProductComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
