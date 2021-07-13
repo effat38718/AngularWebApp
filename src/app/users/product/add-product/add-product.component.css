@@ -1,0 +1,11 @@
+.product-description-width{
+    width: 100%;
+    height: 50%
+}
+.mat-dialog-actions{
+    justify-content: flex-end;
+    flex-direction: end;
+}
+.quantityfield{
+    width:100%;
+}

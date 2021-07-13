@@ -1,8 +1,30 @@
-<!-- <label class="image-upload-container btn btn-bwm">
-    <span>Select Image</span>
-    <input #imageInput
-           type="file"
-           accept="image/*"
-           (change)="processFile(imageInput)">
-  </label> -->
-  <p>it works</p>
+<form class="example-form" (ngSubmit)="onSubmitProductForm()" [formGroup]="ProductFormGroup">
+    
+    <mat-form-field class="product-name-width">
+        <mat-label>Product Name</mat-label>
+        <input matInput type="text" formControlName="pname" name="pname" id="pname" > <br> <br>
+    </mat-form-field><br>
+    <mat-form-field  class="product-quantity-Field">
+      <mat-label>Quantity</mat-label>
+      <input matInput type="text" formControlName="quantity" class="quantityfield" > 
+      <div mat-dialog-actions>
+        <button mat-icon-button class="example-icon-remove-icon" aria-label="Example icon-button with remove icon">
+            <mat-icon (click)="OnClickRemoveIcon()">remove</mat-icon>
+          </button>
+        <button mat-icon-button class="example-icon-add-icon" aria-label="Example icon-button with add icon">
+            <mat-icon (click)="OnClickAddIcon()">add</mat-icon>
+          </button>
+    </div>
+    </mat-form-field><br> 
+    <mat-form-field class="product-price-width">
+        <mat-label>Price</mat-label>
+        <input matInput type="text" formControlName="price" name="price" id="price" > <br> <br>
+    </mat-form-field><br>
+    <mat-form-field class="product-description-width" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description" ></textarea>
+      </mat-form-field> <br>
+      <div class="submit-button">
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </div>
+  </form>
