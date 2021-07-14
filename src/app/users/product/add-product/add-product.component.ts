@@ -4,11 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductComponent } from '../product.component';
 
-
-// class Image {
-//   constructor(public src: string, public file: File) { }
-// }
-
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -18,9 +13,7 @@ export class AddProductComponent implements OnInit {
   ProductFormGroup: FormGroup;
   isValidated: boolean;
   x: number;
-  // BASEURL: string = 'http://127.0.0.1:5000/'
-
-  // selectedFile: Image;
+  BASEURL: string = 'http://127.0.0.1:5000/'
 
   constructor(private http: HttpClient) {
     this.ProductFormGroup = new FormGroup(
@@ -39,20 +32,23 @@ export class AddProductComponent implements OnInit {
   }
 
   onSubmitProductForm() {
-    // var inputProductname = this.ProductFormGroup.value.pname
-    // var inputQuantity = this.ProductFormGroup.value.quantity
+    var body =
+    {
+      "productname": this.ProductFormGroup.value['pname'],
+      "quantity": this.ProductFormGroup.value['quantity'],
+      "price": this.ProductFormGroup.value['price'],
+      "description": this.ProductFormGroup.value['description']
+    }
+    //console.log(body);
 
-    // this.http.get(this.BASEURL + '/api/getVotka').subscribe(
-    //   res => {
-    //     this.isValidated = this.validateUser(res, inputEmail, inputPass);
-    //     if (this.isValidated) {
-    //       this.router.navigate(['/product']);
-    //     }
-    //   },
-    //   error => {
-    //     console.log(error)
-    //   }
-    // )
+    this.http.post(this.BASEURL + 'api/addProductInCart', body).subscribe(
+      res => {
+        console.log(res)
+      },
+      error => {
+        console.log(error)
+      }
+    )
   }
   OnClickAddIcon() {
 

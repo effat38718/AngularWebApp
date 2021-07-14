@@ -1,15 +1,40 @@
 
 <mat-card class="example-card">
 <mat-tab-group mat-align-tabs="center">
-    <!-- <mat-tab label="Add product">
-        <div class="example-button-container">
-            <button mat-raised-button color="primary" class="button" id="add" (click)="openAddProductPopUp()">
-                <i class="material-icons" role="presentation">add</i>
-                 <span class="visuallyhidden"></span> 
-              </button>
-          </div>
-    </mat-tab> -->
-    <mat-tab label="Products"></mat-tab>
+    <mat-tab label="Products">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- productname Column -->
+            <ng-container matColumnDef="productname">
+              <th mat-header-cell *matHeaderCellDef> Product Name </th>
+              <td mat-cell *matCellDef="let user"> {{user.productname}} </td>
+            </ng-container>
+          
+            <!-- quantity Column -->
+            <ng-container matColumnDef="quantity">
+              <th mat-header-cell *matHeaderCellDef> Quantity </th>
+              <td mat-cell *matCellDef="let user"> {{user.quantity}} </td>
+            </ng-container>
+          
+            <!-- price Column -->
+            <ng-container matColumnDef="price">
+              <th mat-header-cell *matHeaderCellDef> Price </th>
+              <td mat-cell *matCellDef="let user"> {{user.price}} </td>
+            </ng-container>
+          
+            <!-- DOB Column -->
+            <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef> Description </th>
+              <td mat-cell *matCellDef="let user"> {{user.description}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </mat-tab>
   </mat-tab-group>
 </mat-card>
   

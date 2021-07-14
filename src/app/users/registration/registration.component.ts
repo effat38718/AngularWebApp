@@ -50,7 +50,7 @@ export class RegistrationComponent implements OnInit {
       "dob": dob
     }
 
-    // console.log(body)
+    //console.log(body)
     this.http.post(this.BASEURL + '/api/postdata', body).subscribe(
       res => {
         console.log(res)
